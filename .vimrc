@@ -1,0 +1,45 @@
+" PATHOGEN MOD STUFF
+execute pathogen#infect()
+
+
+" PLUGIN SHORTCUTS
+map <leader>n :NERDTreeToggle<CR>
+map <leader>td <Plug>TaskList
+
+
+" NORMAL STUFF
+colorscheme slate		
+set background=dark
+set number			                " show line numbers
+" set relativenumber                " sets relative line numbers
+"let loaded_matchparen = 1	        " disables parenthesis highlighting
+
+set tabstop=4			            " set tab width to 4
+set shiftwidth=4
+set expandtab			            " use spaces for tabs
+set softtabstop=4                   " for deleting 4 spaces at a time?
+
+set cindent			                " tries to auto indent C style code
+set autoindent                      " keeps things indented?
+set nosmartindent                   " supposed to stop python # comments from being pushed to left
+set linebreak                       " stops lines from wrapping in the middle of words
+filetype indent on
+
+set hidden                          " something to do with multiple buffers
+set history=500                     " remember more previous commands
+
+set wildmenu                        " fix autocomplete for opening files with :e
+set wildmode=list:longest
+
+set scrolloff=3                     " keep 3 lines visible around current line when scrolling
+
+set hlsearch                        " start highlighting mathces as they are typed
+set incsearch
+set smartcase                       " case insensitive search unless capitals are specified
+set ignorecase
+
+set backupdir=~/.vim/backup//      " this should put all swap files and backups in one folder
+set directory=~/.vim/swp//
+
+" FOR LANGUAGE SPECIFIC SETTINGS?
+filetype plugin on
