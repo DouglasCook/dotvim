@@ -21,3 +21,7 @@ YouCompleteMe needs to be compiled before it can be used, this requires the subm
 - `./install.sh --clang-completer --system-clang`
 
 More comprehensive instructions can be found at http://www.alexeyshmalko.com/2014/youcompleteme-ultimate-autocomplete-plugin-for-vim/
+
+## Updating submodules
+
+`git submodule foreach git pull origin master`
