@@ -6,6 +6,7 @@ execute pathogen#infect()
 map <leader>n :NERDTreeToggle<CR>
 map <leader>td <Plug>TaskList
 
+:let g:airline_theme='molokai'           " set airline theme for clearer bars
 
 " NORMAL STUFF
 colorscheme slate		
