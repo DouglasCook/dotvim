@@ -18,7 +18,7 @@ Switch to the `~/.vim` directory, and fetch submodules:
 YouCompleteMe needs to be compiled before it can be used, this requires the submodules to be pulled first:
 
 - `git submodule update --init --recursive`
-- `./install.sh --clang-completer --system-clang`
+- `./install.sh --clang-completer --system-libclang`
 
 More comprehensive instructions can be found at http://www.alexeyshmalko.com/2014/youcompleteme-ultimate-autocomplete-plugin-for-vim/
 
