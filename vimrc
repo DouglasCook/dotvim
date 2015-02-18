@@ -1,14 +1,18 @@
-" PATHOGEN MOD STUFF
+" -------------------------- PATHOGEN MOD STUFF ---------------------------
+"
 execute pathogen#infect()
 
 
-" PLUGIN SHORTCUTS
+" ----------------------------- PLUGIN SHORTCUTS --------------------------
+"
 map <leader>n :NERDTreeToggle<CR>
 map <leader>td <Plug>TaskList
 
 :let g:airline_theme='molokai'           " set airline theme for clearer bars
 
-" NORMAL STUFF
+
+" ----------------------------- NORMAL STUFF ------------------------------
+"
 colorscheme slate		
 set background=dark
 set number			                " show line numbers
@@ -42,5 +46,7 @@ set ignorecase
 set backupdir=~/.vim/backup//      " this should put all swap files and backups in one folder
 set directory=~/.vim/swp//
 
-" FOR LANGUAGE SPECIFIC SETTINGS?
+
+" --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
+"
 filetype plugin on

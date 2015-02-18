@@ -1,2 +1,3 @@
-" colorscheme solarized
-colorscheme wombat256mod
+colorscheme solarized
+set background=light
+" colorscheme wombat256mod
