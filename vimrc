@@ -39,7 +39,7 @@ set wildmode=list:longest
 
 set scrolloff=3                     " keep 3 lines visible around current line when scrolling
 
-set hlsearch                        " start highlighting mathces as they are typed
+set hlsearch                        " start highlighting matches as they are typed
 set incsearch
 set smartcase                       " case insensitive search unless capitals are specified
 set ignorecase
@@ -51,12 +51,24 @@ set modelines=0                     " something to do with a security flaw
 set nocompatible
 set encoding=utf-8
 
+
 " --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
 "
 filetype plugin on
 
 
 " ---------------------------- SHORTCUT MAPPINGS ----------------------------
+" can't have inline commments here, whitespace after the mapping is added to it!
 "
-map <leader><space> :noh<cr>        " get rid of highlighting
-inoremap jj <esc>                   " easier escape back to normal mode
+" get rid of highlighting
+nnoremap <leader><space> :noh<cr>
+
+" easier escape back to normal mode
+inoremap jj <esc>
+
+" saving
+nnoremap <leader>w :w<cr>
+cnoreabbrev W w
+
+" stop the weird command history window from popping up when trying to quit
+map q: :q
