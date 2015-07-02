@@ -67,7 +67,7 @@ nnoremap <leader><space> :noh<cr>
 inoremap jj <esc>
 
 " saving
-nnoremap <leader>w :w<cr>
+nnoremap <leader>s :w<cr>
 cnoreabbrev W w
 
 " stop the weird command history window from popping up when trying to quit
