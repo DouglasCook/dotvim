@@ -7,13 +7,15 @@ execute pathogen#infect()
 "
 map <leader>n :NERDTreeToggle<CR>
 map <leader>td <Plug>TaskList
+" search in growthintel by default
+nnoremap <leader>p :CtrlP ~/growthintel<CR>
 
 ":let g:airline_theme='molokai'     " set airline theme for clearer bars (if using wombat)
 
 
 " ----------------------------- NORMAL STUFF ------------------------------
 "
-colorscheme slate
+"colorscheme slate
 set background=dark
 set number			                " show line numbers
 "set relativenumber                 " sets relative line numbers
@@ -51,6 +53,11 @@ set modelines=0                     " something to do with a security flaw
 set nocompatible
 set encoding=utf-8
 
+" reload vimrc automatically when it is saved
+augroup reload_vimrc " {
+    autocmd!
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END " }
 
 " --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
 "
@@ -69,6 +76,9 @@ inoremap jj <esc>
 " saving
 nnoremap <leader>s :w<cr>
 cnoreabbrev W w
+
+" quitting
+nnoremap <leader>q :q<cr>
 
 " stop the weird command history window from popping up when trying to quit
 map q: :q
