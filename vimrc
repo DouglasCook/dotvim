@@ -5,18 +5,18 @@ execute pathogen#infect()
 
 " ----------------------------- PLUGIN SHORTCUTS --------------------------
 "
-map <leader>n :NERDTreeToggle<CR>
+map <leader>n :NERDTreeTabsToggle<CR>
 map <leader>td <Plug>TaskList
 " search in growthintel by default
-nnoremap <leader>p :CtrlP ~/growthintel<CR>
+nnoremap <leader>p :CtrlP /Users/douglas/growthintel/<CR>
 
-":let g:airline_theme='molokai'     " set airline theme for clearer bars (if using wombat)
+:let g:airline_theme='molokai'     " set airline theme for clearer bars (if using wombat)
 
 
 " ----------------------------- NORMAL STUFF ------------------------------
 "
-"colorscheme slate
-set background=dark
+colorscheme slate
+"set background=dark
 set number			                " show line numbers
 "set relativenumber                 " sets relative line numbers
 "let loaded_matchparen = 1	        " disables parenthesis highlighting
@@ -30,7 +30,7 @@ set cindent			                " tries to auto indent C style code
 set autoindent                      " keeps things indented?
 set nosmartindent                   " supposed to stop python # comments from being pushed to left
 set linebreak                       " stops lines from wrapping in the middle of words
-set colorcolumn=100                 " highlight at 100 characters
+set colorcolumn=80                 " highlight at 100 characters
 filetype indent on
 
 set hidden                          " something to do with multiple buffers
@@ -58,6 +58,7 @@ augroup reload_vimrc " {
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
+
 
 " --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
 "
