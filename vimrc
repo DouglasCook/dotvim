@@ -53,6 +53,10 @@ set modelines=0                     " something to do with a security flaw
 set nocompatible
 set encoding=utf-8
 
+set noerrorbells                    " disable error noises/flashes
+set novisualbell
+set vb t_vb=
+
 " reload vimrc automatically when it is saved
 augroup reload_vimrc " {
     autocmd!
@@ -83,3 +87,7 @@ nnoremap <leader>q :q<cr>
 
 " stop the weird command history window from popping up when trying to quit
 map q: :q
+
+" get rid of annoying f1 help popup
+:nmap <F1> <nop>
+:imap <F1> <nop>
