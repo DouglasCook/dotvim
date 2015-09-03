@@ -15,6 +15,7 @@ nnoremap <leader>p :CtrlP /Users/douglas/growthintel/<CR>
 
 " ----------------------------- NORMAL STUFF ------------------------------
 "
+syntax on
 colorscheme slate
 "set background=dark
 set number			                " show line numbers
