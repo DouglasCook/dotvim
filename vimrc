@@ -12,6 +12,8 @@ nnoremap <leader>p :CtrlP /Users/douglas/growthintel/<CR>
 
 :let g:airline_theme='molokai'     " set airline theme for clearer bars (if using wombat)
 
+map <leader>t :TagbarToggle<CR>
+
 
 " ----------------------------- NORMAL STUFF ------------------------------
 "
@@ -63,7 +65,6 @@ augroup reload_vimrc " {
     autocmd!
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
-
 
 " --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
 "
