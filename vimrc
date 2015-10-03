@@ -33,7 +33,7 @@ set cindent			                " tries to auto indent C style code
 set autoindent                      " keeps things indented?
 set nosmartindent                   " supposed to stop python # comments from being pushed to left
 set linebreak                       " stops lines from wrapping in the middle of words
-set colorcolumn=80                 " highlight at 100 characters
+set colorcolumn=80                  " highlight at 100 characters
 filetype indent on
 
 set hidden                          " something to do with multiple buffers
@@ -66,6 +66,8 @@ augroup reload_vimrc " {
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END " }
 
+set tags=./tags;/                   " search up through directories for tags file
+
 " --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
 "
 filetype plugin on
@@ -93,3 +95,11 @@ map q: :q
 " get rid of annoying f1 help popup
 :nmap <F1> <nop>
 :imap <F1> <nop>
+
+" add a pdb breakpoint
+nnoremap <leader>p :call InsertPdb()<CR>
+
+function! InsertPdb()
+    let trace = expand("import pdb; pdb.set_trace()")
+    execute "normal o".trace
+endfunction
