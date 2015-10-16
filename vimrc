@@ -77,17 +77,17 @@ filetype plugin on
 " can't have inline commments here, whitespace after the mapping is added to it!
 "
 " get rid of highlighting
-nnoremap <leader><space> :noh<cr>
+nnoremap <leader><space> :noh<CR>
 
 " easier escape back to normal mode
 inoremap jj <esc>
 
 " saving
-nnoremap <leader>s :w<cr>
+nnoremap <leader>s :w<CR>
 cnoreabbrev W w
 
 " quitting
-nnoremap <leader>q :q<cr>
+nnoremap <leader>q :q<CR>
 
 " stop the weird command history window from popping up when trying to quit
 map q: :q
@@ -96,10 +96,18 @@ map q: :q
 :nmap <F1> <nop>
 :imap <F1> <nop>
 
+" strip all trailing whitespace
+nnoremap <leader>a :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:w<CR>
+
 " add a pdb breakpoint
-nnoremap <leader>p :call InsertPdb()<CR>
 
 function! InsertPdb()
     let trace = expand("import pdb; pdb.set_trace()")
     execute "normal o".trace
 endfunction
+
+nnoremap <leader>p :call InsertPdb()<CR>
+
+" colourschemes
+nnoremap <F2> :colorscheme wombat256mod<CR>
+nnoremap <F3> :colorscheme solarized<CR>
