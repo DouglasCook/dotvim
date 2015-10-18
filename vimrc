@@ -1,6 +1,7 @@
 " -------------------------- PATHOGEN MOD STUFF ---------------------------
 "
 execute pathogen#infect()
+Helptags
 
 
 " ----------------------------- PLUGIN SHORTCUTS --------------------------
@@ -71,6 +72,16 @@ set tags=./tags;/                   " search up through directories for tags fil
 " --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
 "
 filetype plugin on
+
+
+" --------------------- SYNTASTIC SETTINGS ---------------------
+"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 
 " ---------------------------- SHORTCUT MAPPINGS ----------------------------
