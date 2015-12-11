@@ -69,6 +69,8 @@ augroup END " }
 
 set tags=./tags;/                   " search up through directories for tags file
 
+cd ./                               " set working directory
+
 " --------------------- FOR LANGUAGE SPECIFIC SETTINGS? ---------------------
 "
 filetype plugin on
@@ -111,14 +113,18 @@ map q: :q
 nnoremap <leader>a :let _s=@/<Bar>:%s/\s\+$//e<Bar>:let @/=_s<Bar>:nohl<CR>:w<CR>
 
 " add a pdb breakpoint
-
 function! InsertPdb()
-    let trace = expand("import pdb; pdb.set_trace()")
+    let trace = expand("import ipdb; ipdb.set_trace()")
     execute "normal o".trace
 endfunction
 
 nnoremap <leader>p :call InsertPdb()<CR>
 
-" colourschemes
+" colour schemes
 nnoremap <F2> :colorscheme wombat256mod<CR>
-nnoremap <F3> :colorscheme solarized<CR>
+nnoremap <F3> :colorscheme kalisi<CR>
+nnoremap <F4> :colorscheme solarized<CR>
+nnoremap <F10> :let &background = ( &background == "dark"? "light" : "dark" )<CR>
+
+" open ctag in new vertical split
+"nnoremap <C-[> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
